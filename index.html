@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Portfolio d’Hippolyte, étudiant en BTS SIO SISR.">
   <title>Hippolyte TREHOREL — Portfolio SIO SISR</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,10 +28,41 @@
 
   <main>
     <div class="hero">
+      <div class="hero-grid">
+      <div class="hero-text">
       <div class="label">Portfolio · BTS SIO SISR</div>
       <h1 class="name">Hippolyte Tréhorel.</h1>
-      <p class="role">Étudiant en BTS SIO.<br>Curieux, rigoureux et motivé par la technique.</p>
+      <p class="role">Étudiant en systèmes informatiques et réseaux.<br>Curieux, rigoureux et motivé par la technique.</p>
       <a class="btn" href="#apropos">Découvrir mon profil ↓</a>
+      </div>
+      <svg class="net" id="net" viewBox="0 0 400 360" role="img" aria-label="Schéma d’un réseau : un routeur relié à un pare-feu, un serveur, un NAS et trois postes">
+        <g class="links">
+          <path class="link" d="M200,170 L200,40"/>
+          <path class="link" d="M200,170 L340,100"/>
+          <path class="link" d="M200,170 L330,260"/>
+          <path class="link" d="M200,170 L200,320"/>
+          <path class="link" d="M200,170 L70,260"/>
+          <path class="link" d="M200,170 L60,100"/>
+          <path class="link soft" d="M200,40 L340,100"/>
+          <path class="link soft" d="M200,40 L60,100"/>
+        </g>
+        <g class="nodes">
+          <circle class="node core" cx="200" cy="170" r="28"/><text class="core-t" x="200" y="175">R1</text>
+          <circle class="node" cx="200" cy="40" r="20"/><text x="200" y="44">FW</text>
+          <circle class="node" cx="340" cy="100" r="20"/><text x="340" y="104">SRV</text>
+          <circle class="node" cx="330" cy="260" r="20"/><text x="330" y="264">PC1</text>
+          <circle class="node" cx="200" cy="320" r="20"/><text x="200" y="324">PC2</text>
+          <circle class="node" cx="70" cy="260" r="20"/><text x="70" y="264">PC3</text>
+          <circle class="node" cx="60" cy="100" r="20"/><text x="60" y="104">NAS</text>
+        </g>
+        <circle class="pkt" r="4" visibility="hidden"><set attributeName="visibility" to="visible" begin="1.4s"/><animateMotion dur="2.6s" begin="1.4s" repeatCount="indefinite" path="M200,170 L200,40"/></circle>
+        <circle class="pkt" r="4" visibility="hidden"><set attributeName="visibility" to="visible" begin="1.9s"/><animateMotion dur="3.2s" begin="1.9s" repeatCount="indefinite" path="M340,100 L200,170"/></circle>
+        <circle class="pkt" r="4" visibility="hidden"><set attributeName="visibility" to="visible" begin="2.3s"/><animateMotion dur="3.6s" begin="2.3s" repeatCount="indefinite" path="M200,170 L330,260"/></circle>
+        <circle class="pkt" r="4" visibility="hidden"><set attributeName="visibility" to="visible" begin="2.7s"/><animateMotion dur="2.9s" begin="2.7s" repeatCount="indefinite" path="M200,320 L200,170"/></circle>
+        <circle class="pkt" r="4" visibility="hidden"><set attributeName="visibility" to="visible" begin="3.1s"/><animateMotion dur="3.4s" begin="3.1s" repeatCount="indefinite" path="M200,170 L70,260"/></circle>
+        <circle class="pkt" r="4" visibility="hidden"><set attributeName="visibility" to="visible" begin="3.5s"/><animateMotion dur="3s" begin="3.5s" repeatCount="indefinite" path="M60,100 L200,170"/></circle>
+      </svg>
+      </div>
       <div class="domains label">Informatique / Réseaux / Sécurité</div>
     </div>
 
@@ -46,15 +77,15 @@
         </div>
         <div class="block">
           <div class="label">02 — Formation</div>
-          <div class="big">BTS SIO — option SISR</div>
+          <div class="big">SIO.</div>
           <h3>Systèmes &amp; Réseaux</h3>
+          <p class="muted">BTS SIO — option SISR</p>
           <p class="muted">Notre-Dame de La Paix · Ploemeur</p>
         </div>
         <div class="block">
           <div class="label">03 — Parcours</div>
           <h3>Un parcours orienté sécurité</h3>
-          <p class="muted">J'ai fait un bac professionnel Métiers de la Sécurité et ça m’a permis de développer rigueur, sens des responsabilités et esprit d’équipe.</p>
-          <p class="muted">Notre-Dame de La Paix · Ploemeur</p>
+          <p class="muted">Mon bac professionnel Métiers de la Sécurité m’a permis de développer rigueur, sens des responsabilités et esprit d’équipe.</p>
         </div>
       </div>
     </section>
@@ -72,7 +103,8 @@
             <li>Bases des systèmes informatiques</li>
             <li>Principes des réseaux</li>
             <li>Adressage IP et protocoles réseau</li>
-            <li>Secours à personnes</li>
+            <li>Notions de cybersécurité</li>
+            <li>Prévention et sécurité des personnes</li>
           </ul>
         </div>
         <div class="block">
@@ -146,6 +178,7 @@
         <div class="block">
           <div class="label">Qualifications</div>
           <p><span class="tag">SST</span><span class="tag">SSIAP 1</span><span class="tag">PSE1</span><span class="tag">PSE2</span><span class="tag">SUAP</span></p>
+          <p class="note">Vérifie les intitulés et la validité des qualifications avant publication.</p>
         </div>
       </div>
     </section>
