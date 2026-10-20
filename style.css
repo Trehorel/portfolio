@@ -157,3 +157,47 @@ h1, h2, h3 { text-wrap: balance; }
   .hero-grid { grid-template-columns: 1fr; }
   .net { justify-self: start; max-width: 320px; }
 }
+
+/* ===== ANIMATIONS ===== */
+@property --water { syntax: '<percentage>'; inherits: false; initial-value: 56%; }
+.name {
+  background: linear-gradient(to bottom, var(--ink) 0 var(--water, 56%), var(--sea) var(--water, 56%) 100%);
+  -webkit-background-clip: text; background-clip: text;
+}
+.progress {
+  position: fixed; left: 0; right: 0; top: env(safe-area-inset-top, 0px); height: 3px;
+  background: var(--sea); transform-origin: 0 50%; transform: scaleX(0);
+  z-index: 40; pointer-events: none;
+}
+.top nav a {
+  padding-bottom: .15rem;
+  background: linear-gradient(var(--sea), var(--sea)) 0 100% / 0 2px no-repeat;
+  transition: background-size .25s ease;
+}
+.top nav a:hover, .top nav a[aria-current="true"] { background-size: 100% 2px; text-decoration: none; }
+.theme { transition: transform .4s, border-color .2s; }
+.theme:hover { transform: rotate(180deg); }
+.btn { transition: transform .2s, background .2s, border-color .2s; }
+.btn:hover { transform: translateY(-3px); }
+.tag { transition: transform .2s, border-color .2s; }
+.tag:hover { transform: translateY(-2px); border-color: var(--sea); }
+.proj .n { transition: transform .3s; }
+.proj:hover .n { transform: translateX(8px); }
+.block { transition: border-color .2s, transform .3s; }
+.block:hover { transform: translateY(-4px); }
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes rise { from { opacity: 0; translate: 0 22px; } to { opacity: 1; translate: 0 0; } }
+  @keyframes tide { from { --water: 100%; } to { --water: 56%; } }
+  @keyframes halo { 0%, 100% { stroke-width: 2; stroke-opacity: 1; } 50% { stroke-width: 12; stroke-opacity: .25; } }
+  @keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+  .hero-text > * { animation: rise .8s ease-out both; }
+  .hero-text > :nth-child(1) { animation-delay: .1s; }
+  .hero-text > :nth-child(3) { animation-delay: .45s; }
+  .hero-text > :nth-child(4) { animation-delay: .6s; }
+  .hero-text > .name { animation: rise .8s .25s ease-out both, tide 1.8s .7s ease-out both; }
+  .domains { animation: rise .8s .9s ease-out both; }
+  .net { animation: float 7s 2s ease-in-out infinite; }
+  .net .node.core { animation: halo 2.6s 1.2s ease-in-out infinite; }
+  .reveal { opacity: 0; }
+  .reveal.in { animation: rise .7s var(--d, 0ms) ease-out both; }
+}
