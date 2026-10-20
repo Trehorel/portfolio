@@ -1,4 +1,4 @@
-// Bouton de thème (clair / sombre) + menu actif + animation réseau
+// Thème, menu actif, animation réseau, barre de progression, apparitions
 (function () {
   var root = document.documentElement;
   var btn = document.getElementById('theme');
@@ -41,6 +41,36 @@
     Object.keys(map).forEach(function (id) {
       var s = document.getElementById(id);
       if (s) io.observe(s);
+    });
+  }
+
+  // Barre de progression en haut de page
+  var bar = document.createElement('div');
+  bar.className = 'progress';
+  document.body.appendChild(bar);
+  function progress() {
+    var d = document.documentElement;
+    var max = d.scrollHeight - d.clientHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? d.scrollTop / max : 0) + ')';
+  }
+  window.addEventListener('scroll', progress, { passive: true });
+  window.addEventListener('resize', progress);
+  progress();
+
+  // Apparition des blocs au défilement
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!calm && 'IntersectionObserver' in window) {
+    var items = document.querySelectorAll('section h2, .intro, .block, .proj, .contact-box, .note');
+    var show = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); show.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    items.forEach(function (el) {
+      var i = Array.prototype.indexOf.call(el.parentNode.children, el);
+      el.style.setProperty('--d', Math.min(i, 4) * 100 + 'ms');
+      el.classList.add('reveal');
+      show.observe(el);
     });
   }
 })();
