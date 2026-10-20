@@ -6,18 +6,19 @@
   --muted: #4F6270;
   --sea: #1F7A6D;
   --line: #C3CFD4;
+  --amber: #C9822B;
   --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
   --body: "Newsreader", Georgia, "Times New Roman", serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0F1B26; --surface: #162634; --ink: #E6EEF1;
-    --muted: #9DB0BB; --sea: #4FC3AE; --line: #27394A;
+    --muted: #9DB0BB; --sea: #4FC3AE; --line: #27394A; --amber: #F2B85A;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0F1B26; --surface: #162634; --ink: #E6EEF1;
-  --muted: #9DB0BB; --sea: #4FC3AE; --line: #27394A;
+  --muted: #9DB0BB; --sea: #4FC3AE; --line: #27394A; --amber: #F2B85A;
 }
 
 /* ===== BASE ===== */
@@ -40,7 +41,10 @@ p { margin: 0 0 .8rem; }
 /* ===== EN-TÊTE ===== */
 .top {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 1.5rem 0; font-family: var(--display); font-weight: 500;
+  padding: .9rem 0; font-family: var(--display); font-weight: 500;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
 }
 .logo { font-weight: 800; font-size: 1.6rem; text-decoration: none; }
 .top nav { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1.5rem; }
@@ -56,7 +60,7 @@ p { margin: 0 0 .8rem; }
 .hero { padding: clamp(2.5rem, 8vw, 6rem) 0 clamp(2.5rem, 6vw, 4rem); }
 .name {
   margin: .8rem 0 0; font-family: var(--display); font-weight: 800;
-  font-size: clamp(2.8rem, 11vw, 8rem); line-height: 1; letter-spacing: -.03em;
+  font-size: clamp(2.8rem, 8vw, 5.8rem); line-height: 1; letter-spacing: -.03em;
   padding-bottom: .1em;
   /* effet « ligne de flottaison » : le bas du nom change de couleur */
   background: linear-gradient(to bottom, var(--ink) 0 56%, var(--sea) 56% 100%);
@@ -102,8 +106,6 @@ h3 { margin: .4rem 0 .6rem; font-family: var(--display); font-weight: 800; font-
   text-decoration-thickness: 3px; text-underline-offset: 8px;
   text-decoration-color: var(--sea); word-break: break-word;
 }
-.card { display: block; text-decoration: none; background: var(--surface); padding: 1.3rem; border-radius: 12px; }
-.card:hover { outline: 2px solid var(--sea); }
 
 /* ===== PIED DE PAGE ===== */
 footer {
@@ -121,3 +123,37 @@ footer a { text-decoration: none; font-family: var(--display); font-weight: 500;
 
 /* ===== NOTES ===== */
 .note { margin-top: 1.5rem; font-size: .95rem; color: var(--muted); font-style: italic; }
+
+/* Zones sûres mobile */
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(4.5rem + env(safe-area-inset-top,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+
+/* ===== AMÉLIORATIONS DESIGN ===== */
+::selection { background: var(--sea); color: var(--bg); }
+h1, h2, h3 { text-wrap: balance; }
+.hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 2rem; align-items: center; }
+.net { width: 100%; height: auto; max-width: 440px; justify-self: end; }
+.net .link { stroke: var(--line); stroke-width: 2; fill: none; }
+.net .link.soft { stroke-dasharray: 4 6; }
+.net .node { fill: var(--bg); stroke: var(--ink); stroke-width: 2; }
+.net .node.core { fill: var(--sea); stroke: var(--sea); }
+.net text { font-family: var(--display); font-weight: 500; font-size: 12px; fill: var(--muted); text-anchor: middle; }
+.net .core-t { fill: var(--bg); font-weight: 800; font-size: 15px; }
+.net .pkt { fill: var(--amber); }
+.top nav a[aria-current="true"] { color: var(--sea); text-decoration: underline; text-underline-offset: 6px; }
+.block { transition: border-color .2s; }
+.block:hover { border-top-color: var(--sea); }
+.tag { border: 1px solid var(--line); }
+@media (prefers-reduced-motion: no-preference) {
+  .net .link { stroke-dashoffset: 260; animation: draw 1.1s .2s ease-out forwards; }
+  .net .link:not(.soft) { stroke-dasharray: 260; }
+  .net .link.soft { animation-name: fade; animation-duration: .6s; animation-delay: .9s; opacity: 0; stroke-dashoffset: 0; animation-fill-mode: forwards; }
+  .net .nodes { opacity: 0; animation: fade .6s .9s forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes fade { to { opacity: 1; } }
+}
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .net { justify-self: start; max-width: 320px; }
+}
