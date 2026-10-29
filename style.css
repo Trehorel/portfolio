@@ -1211,3 +1211,37 @@ section[id] {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Animations pilotées par script.js */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navigation a.active {
+  color: var(--orange);
+}
+
+.footer-year {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
