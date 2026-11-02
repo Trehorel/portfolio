@@ -1060,3 +1060,63 @@ section[id] {
     transition: none;
   }
 }
+
+
+/* ===== CERTIFICATIONS ===== */
+
+.certification-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.certification-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 23px;
+    background: #fffaf2;
+    border: 1px solid #e3dfd5;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    border-color: #c85e32;
+    box-shadow: 0 10px 25px rgba(36, 40, 35, 0.07);
+}
+
+.certification-acronym {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    min-width: 65px;
+    min-height: 48px;
+    padding: 8px;
+    border-radius: 8px;
+    background: #f0dfd3;
+    color: #c85e32;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.certification-card h4 {
+    margin-bottom: 7px;
+    color: #242823;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.certification-card p {
+    color: #777a70;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+@media (max-width: 750px) {
+    .certification-list {
+        grid-template-columns: 1fr;
+    }
+}
