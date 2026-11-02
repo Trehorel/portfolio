@@ -1,26 +1,26 @@
-
 /* =========================================
    PORTFOLIO BTS SIO SISR
    Interactions et animations
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
+
   // 1. Année automatique dans le pied de page
   const footer = document.querySelector(".footer-content");
 
-  if (footer) {
+  if (footer && !footer.querySelector(".footer-year")) {
     const year = document.createElement("span");
     year.className = "footer-year";
     year.textContent = new Date().getFullYear();
     footer.appendChild(year);
   }
 
-  // 2. Apparition progressive des sections et des cartes
+  // 2. Apparition progressive des éléments
   const animatedElements = document.querySelectorAll(
-    ".section-heading, .content-card, .project-guidance, .contact-panel"
+    ".section-heading, .content-card, .project-guidance, " +
+    ".contact-panel, .tp-card, .objectif-card, .competence-tabs"
   );
 
-  // Repli si les animations sont désactivées dans le système
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
       element.classList.add("reveal");
     });
 
-    const observer = new IntersectionObserver(
-      (entries, observerInstance) => {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-            observerInstance.unobserve(entry.target);
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -46,14 +46,65 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     animatedElements.forEach((element) => {
-      observer.observe(element);
+      revealObserver.observe(element);
     });
   }
 
-  // 3. Fermeture du menu après le clic sur un lien
-  const navigationLinks = document.querySelectorAll(
-    ".navigation a"
-  );
+  // 3. Onglets interactifs des compétences
+  const tabs = document.querySelectorAll(".competence-tab");
+  const panels = document.querySelectorAll(".competence-panel");
+
+  function activateTab(tab) {
+    const targetId = tab.dataset.target;
+
+    tabs.forEach((item) => {
+      const selected = item === tab;
+
+      item.classList.toggle("active", selected);
+      item.setAttribute("aria-selected", String(selected));
+      item.tabIndex = selected ? 0 : -1;
+    });
+
+    panels.forEach((panel) => {
+      const selected = panel.id === targetId;
+
+      panel.classList.toggle("active", selected);
+      panel.hidden = !selected;
+    });
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      activateTab(tab);
+    });
+
+    // Navigation au clavier avec les flèches
+    tab.addEventListener("keydown", (event) => {
+      if (
+        event.key !== "ArrowRight" &&
+        event.key !== "ArrowLeft"
+      ) return;
+
+      event.preventDefault();
+
+      const direction = event.key === "ArrowRight" ? 1 : -1;
+      const nextIndex = (index + direction + tabs.length) % tabs.length;
+
+      tabs[nextIndex].focus();
+      activateTab(tabs[nextIndex]);
+    });
+  });
+
+  // État initial des panneaux
+  if (tabs.length > 0) {
+    const initialTab =
+      document.querySelector(".competence-tab.active") || tabs[0];
+
+    activateTab(initialTab);
+  }
+
+  // 4. Mise en évidence des liens de navigation
+  const navigationLinks = document.querySelectorAll(".navigation a");
 
   navigationLinks.forEach((link) => {
     link.addEventListener("click", () => {
@@ -65,23 +116,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 4. Mise en évidence de la section consultée
+  // 5. Détection de la section consultée
   const sections = document.querySelectorAll("main section[id]");
 
   if ("IntersectionObserver" in window) {
     const sectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const currentId = entry.target.id;
+          if (!entry.isIntersecting) return;
 
-            navigationLinks.forEach((link) => {
-              const isCurrent =
-                link.getAttribute("href") === `#${currentId}`;
+          const currentId = entry.target.id;
 
-              link.classList.toggle("active", isCurrent);
-            });
-          }
+          navigationLinks.forEach((link) => {
+            const isCurrent =
+              link.getAttribute("href") === `#${currentId}`;
+
+            link.classList.toggle("active", isCurrent);
+          });
         });
       },
       {
@@ -93,4 +144,5 @@ document.addEventListener("DOMContentLoaded", () => {
       sectionObserver.observe(section);
     });
   }
+
 });
