@@ -1120,3 +1120,322 @@ section[id] {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ==========================================
+   AMELIORATION RESPONSIVE - TOUT LE PORTFOLIO
+========================================== */
+
+/* Protection générale contre les débordements */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container,
+.content-card,
+.certification-card,
+.tp-card,
+.hero-layout,
+.profile-layout,
+.contact-panel {
+    min-width: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+    overflow-wrap: break-word;
+}
+
+/* TABLETTES */
+@media (max-width: 900px) {
+
+    .container {
+        width: calc(100% - 40px);
+    }
+
+    .nav-container {
+        gap: 18px;
+    }
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .hero-layout {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .competence-panel {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-panel {
+        padding: 32px;
+    }
+}
+
+/* TELEPHONES */
+@media (max-width: 650px) {
+
+    /* Navigation */
+    .header {
+        position: sticky;
+        top: 0;
+    }
+
+    .nav-container {
+        width: 100%;
+        padding: 12px 16px;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .navigation {
+        justify-content: center;
+        gap: 10px 14px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+        padding: 4px 0;
+    }
+
+    .navigation .nav-cta {
+        padding: 5px 9px;
+    }
+
+    /* Accueil */
+    .hero {
+        padding: 45px 0 20px;
+    }
+
+    .hero-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 58px);
+        letter-spacing: -2px;
+        line-height: 1.1;
+    }
+
+    .hero-role {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .hero-card {
+        min-height: 310px;
+        padding: 22px;
+    }
+
+    .hero-card-info h2 {
+        font-size: 31px;
+    }
+
+    .hero-monogram {
+        font-size: 78px;
+    }
+
+    /* Sections */
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2,
+    .contact-panel h2 {
+        font-size: clamp(26px, 7vw, 35px);
+        letter-spacing: -1px;
+    }
+
+    .section-intro {
+        font-size: 13px;
+    }
+
+    /* Grilles */
+    .profile-layout,
+    .formation-grid,
+    .competence-panel,
+    .tp-grid,
+    .objectifs-grid,
+    .contact-panel {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Cartes */
+    .content-card {
+        padding: 21px;
+    }
+
+    .competence-item {
+        min-height: auto;
+    }
+
+    .profile-highlight {
+        padding: 25px;
+    }
+
+    /* Onglets de compétences */
+    .competence-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .competence-tab {
+        flex: 1 1 auto;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    /* Travaux pratiques */
+    .tp-card summary {
+        padding: 17px;
+        gap: 9px;
+    }
+
+    .tp-title {
+        font-size: 14px;
+    }
+
+    .tp-content {
+        padding: 0 17px 18px;
+    }
+
+    /* Certifications */
+    .certification-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .certification-card {
+        width: 100%;
+        padding: 17px;
+        gap: 12px;
+    }
+
+    .certification-acronym {
+        min-width: 58px;
+        min-height: 44px;
+        font-size: 12px;
+    }
+
+    .certification-card h4 {
+        font-size: 14px;
+    }
+
+    .certification-card p {
+        font-size: 12px;
+    }
+
+    /* Contact */
+    .contact-panel {
+        padding: 25px 20px;
+        gap: 22px;
+    }
+
+    .contact-panel .button {
+        width: 100%;
+        white-space: normal;
+    }
+
+    /* Pied de page */
+    .footer-content {
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        padding: 22px 0;
+    }
+}
+
+/* PETITS TELEPHONES */
+@media (max-width: 380px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .navigation {
+        gap: 8px 11px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-card {
+        min-height: 290px;
+        padding: 17px;
+    }
+
+    .section-heading h2,
+    .contact-panel h2 {
+        font-size: 25px;
+    }
+
+    .content-card,
+    .certification-card {
+        padding: 15px;
+    }
+
+    .certification-card {
+        gap: 9px;
+    }
+
+    .certification-acronym {
+        min-width: 52px;
+    }
+
+    .button {
+        font-size: 12px;
+    }
+}
+
+/* Respect des préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
