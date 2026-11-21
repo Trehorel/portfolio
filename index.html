@@ -1,444 +1,186 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio d'Hippolyte Tréhorel, étudiant en BTS SIO SISR. Parcours, compétences informatiques, formation et projets.">
-  <meta name="theme-color" content="#f5f2eb">
-  <title>Hippolyte Tréhorel — Portfolio BTS SIO SISR</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Hippolyte Tréhorel, étudiant en BTS SIO SISR.">
+    <meta name="theme-color" content="#151713">
+    <title>Accueil — Hippolyte Tréhorel</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="header">
+
+<header class="header">
     <div class="container nav-container">
-      <a href="#accueil" class="logo" aria-label="Accueil">HT<span>.</span></a>
+        <a href="index.html" class="logo">HT<span>.</span></a>
 
-      <nav class="navigation" aria-label="Navigation principale">
-        <a href="#parcours">Parcours</a>
-        <a href="#competences">Compétences</a>
-        <a href="#travaux">Travaux pratiques</a>
-        <a href="#objectifs">Objectifs</a>
-        <a href="#contact" class="nav-cta">Contact <span>↗</span></a>
-      </nav>
+        <nav class="navigation" aria-label="Navigation principale">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="parcours.html">Parcours</a>
+            <a href="competences.html">Compétences</a>
+            <a href="travaux.html">Travaux pratiques</a>
+            <a href="objectifs.html">Objectifs</a>
+            <a href="contact.html" class="nav-cta">Contact ↗</a>
+        </nav>
     </div>
-  </header>
+</header>
 
-  <main>
+<main>
+
     <section class="hero" id="accueil">
-      <div class="container hero-layout">
-        <div class="hero-content">
-          <p class="eyebrow"><span class="status-dot"></span> PORTFOLIO PERSONNEL · BTS SIO SISR</p>
+        <div class="container hero-layout">
 
-          <h1>Hippolyte<br><span>Tréhorel.</span></h1>
+            <div class="hero-content">
+                <p class="eyebrow">
+                    <span class="status-dot"></span>
+                    PORTFOLIO PERSONNEL · BTS SIO SISR
+                </p>
 
-          <p class="hero-role">
-            Étudiant en informatique,<br>
-            spécialisé dans les systèmes et réseaux.
-          </p>
+                <h1>Hippolyte<br><span>Tréhorel.</span></h1>
 
-          <p class="hero-description">
-            Je construis progressivement mes compétences en informatique,
-            en administration réseau et en sécurité des systèmes.
-            Ce portfolio présente mon parcours et mon évolution.
-          </p>
+                <p class="hero-role">
+                    Étudiant en informatique,<br>
+                    spécialisé dans les systèmes et réseaux.
+                </p>
 
-          <div class="hero-actions">
-            <a href="#parcours" class="button button-primary">Découvrir mon parcours <span>↓</span></a>
-            <a href="#contact" class="button button-secondary">Me contacter <span>↗</span></a>
-          </div>
-        </div>
+                <p class="hero-description">
+                    Je construis progressivement mes compétences en informatique,
+                    en administration réseau et en sécurité des systèmes.
+                    Découvrez mon parcours, mes apprentissages et mes objectifs.
+                </p>
 
-        <aside class="hero-card" aria-label="Présentation de mon parcours">
-          <div class="card-topline">
-            <span>MON PARCOURS</span>
-            <span class="card-index">01 / 04</span>
-          </div>
+                <div class="hero-actions">
+                    <a href="parcours.html" class="button button-primary">
+                        Découvrir mon parcours <span>↗</span>
+                    </a>
 
-          <div class="hero-monogram">HT<span>.</span></div>
-
-          <div class="hero-card-info">
-            <p class="card-label">FORMATION ACTUELLE</p>
-            <h2>BTS SIO</h2>
-            <p>Option SISR</p>
-            <div class="card-separator"></div>
-            <p class="card-label">ORIENTATION</p>
-            <p class="orientation">Systèmes · Réseaux · Sécurité</p>
-          </div>
-          <div class="card-decoration">INFRASTRUCTURE INFORMATIQUE</div>
-        </aside>
-      </div>
-
-      <div class="container hero-footer">
-        <span>ÉTUDIANT EN PREMIÈRE ANNÉE</span>
-        <a href="#parcours">Explorer mon parcours <span>↓</span></a>
-      </div>
-    </section>
-
-    <section class="section" id="profil">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">01 — À PROPOS</p>
-          <h2>Un parcours tourné vers <span>l'informatique.</span></h2>
-        </div>
-
-        <div class="profile-layout">
-          <div class="profile-text">
-            <p>
-              Après un parcours dans le domaine de la sécurité, j'ai choisi
-              de m'orienter vers l'informatique afin de développer de nouvelles
-              compétences techniques et de construire mon projet professionnel.
-            </p>
-            <p>
-              Actuellement étudiant en BTS SIO option SISR, je m'intéresse
-              particulièrement aux systèmes informatiques, aux réseaux et
-              à la sécurité des infrastructures.
-            </p>
-          </div>
-
-          <div class="profile-highlight">
-            <span class="highlight-number">SISR</span>
-            <p>Solutions d'Infrastructure, Systèmes et Réseaux</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="competences">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">02 — COMPÉTENCES</p>
-          <h2>Ce que je <span>développe.</span></h2>
-          <p class="section-intro">
-            Trois dimensions complémentaires de mon apprentissage en BTS SIO SISR.
-            Les éléments sont à ajuster selon les notions étudiées et les manipulations réellement réalisées.
-          </p>
-        </div>
-
-        <div class="competence-tabs" role="tablist" aria-label="Catégories de compétences">
-          <button class="competence-tab active" id="tab-savoirs" type="button"
-                  role="tab" aria-selected="true" aria-controls="panel-savoirs" data-target="panel-savoirs">
-            Savoirs
-          </button>
-          <button class="competence-tab" id="tab-savoir-faire" type="button"
-                  role="tab" aria-selected="false" aria-controls="panel-savoir-faire" data-target="panel-savoir-faire" tabindex="-1">
-            Savoir-faire
-          </button>
-          <button class="competence-tab" id="tab-savoir-etre" type="button"
-                  role="tab" aria-selected="false" aria-controls="panel-savoir-etre" data-target="panel-savoir-etre" tabindex="-1">
-            Savoir-être
-          </button>
-        </div>
-
-        <div class="competence-panel active" id="panel-savoirs" role="tabpanel" aria-labelledby="tab-savoirs">
-          <article class="content-card competence-item">
-            <span class="skill-number">01</span>
-            <p class="card-label">CONNAISSANCES</p>
-            <h3>Réseaux informatiques</h3>
-            <p>Adressage IPv4, masques, sous-réseaux et principes de communication réseau.</p>
-          </article>
-          <article class="content-card competence-item">
-            <span class="skill-number">02</span>
-            <p class="card-label">CONNAISSANCES</p>
-            <h3>Systèmes</h3>
-            <p>Découverte des environnements Windows et Linux et de leur fonctionnement.</p>
-          </article>
-          <article class="content-card competence-item">
-            <span class="skill-number">03</span>
-            <p class="card-label">CONNAISSANCES</p>
-            <h3>Sécurité informatique</h3>
-            <p>Principes fondamentaux de protection des systèmes et des données.</p>
-          </article>
-        </div>
-
-        <div class="competence-panel" id="panel-savoir-faire" role="tabpanel" aria-labelledby="tab-savoir-faire" hidden>
-          <article class="content-card competence-item">
-            <span class="skill-number">01</span>
-            <p class="card-label">PRATIQUE</p>
-            <h3>Adressage et configuration réseau</h3>
-            <p>Présenter ici les exercices de calcul et les configurations réseau réellement effectués.</p>
-          </article>
-          <article class="content-card competence-item">
-            <span class="skill-number">02</span>
-            <p class="card-label">PRATIQUE</p>
-            <h3>Environnement virtualisé</h3>
-            <p>Décrire les installations et manipulations de machines virtuelles réalisées en cours.</p>
-          </article>
-          <article class="content-card competence-item">
-            <span class="skill-number">03</span>
-            <p class="card-label">PRATIQUE</p>
-            <h3>Diagnostic</h3>
-            <p>Ajouter les outils et méthodes de diagnostic que tu as effectivement utilisés.</p>
-          </article>
-        </div>
-
-        <div class="competence-panel" id="panel-savoir-etre" role="tabpanel" aria-labelledby="tab-savoirs">
-          <article class="content-card competence-item">
-            <span class="skill-number">01</span>
-            <p class="card-label">QUALITÉ</p>
-            <h3>Rigueur</h3>
-            <p>Suivre une méthode et respecter les consignes lors des activités.</p>
-          </article>
-          <article class="content-card competence-item">
-            <span class="skill-number">02</span>
-            <p class="card-label">QUALITÉ</p>
-            <h3>Esprit d'équipe</h3>
-            <p>Échanger des informations et collaborer pour mener une tâche à bien.</p>
-          </article>
-          <article class="content-card competence-item">
-            <span class="skill-number">03</span>
-            <p class="card-label">QUALITÉ</p>
-            <h3>Adaptabilité</h3>
-            <p>S'adapter à de nouveaux outils, environnements et situations.</p>
-          </article>
-        </div>
-
-        <p class="disclaimer">
-          Cette rubrique présente des domaines de connaissance et des qualités à illustrer progressivement.
-          Ne conserve que les compétences qui correspondent à ton expérience réelle.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="travaux">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">03 — APPRENTISSAGES</p>
-          <h2>Mes travaux <span>pratiques.</span></h2>
-          <p class="section-intro">
-            Des fiches pour expliquer le contexte, les objectifs, les outils utilisés,
-            les étapes et le bilan de chaque TP réalisé.
-          </p>
-        </div>
-
-        <div class="tp-grid">
-          <details class="content-card tp-card">
-            <summary>
-              <span class="tp-number">TP 01</span>
-              <span class="tp-title">Adressage IP et sous-réseaux</span>
-              <span class="tp-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="tp-content">
-              <p><strong>Objectif</strong></p>
-              <p>Comprendre l'adressage IPv4 et déterminer les informations d'un réseau à partir d'une adresse et d'un masque.</p>
-              <p><strong>Notions à présenter</strong></p>
-              <ul>
-                <li>Adresse IP et masque de sous-réseau</li>
-                <li>Adresse réseau et adresse de diffusion</li>
-                <li>Plage d'adresses hôtes</li>
-              </ul>
-              <p><strong>Outils utilisés :</strong> à renseigner.</p>
-              <p><strong>Étapes réalisées :</strong> à compléter avec les consignes et manipulations du TP.</p>
-              <p><strong>Bilan personnel :</strong> expliquer ce que tu as compris et les difficultés rencontrées.</p>
-              <span class="tp-status">Fiche modèle à compléter</span>
+                    <a href="contact.html" class="button button-secondary">
+                        Me contacter <span>↗</span>
+                    </a>
+                </div>
             </div>
-          </details>
 
-          <details class="content-card tp-card">
-            <summary>
-              <span class="tp-number">TP 02</span>
-              <span class="tp-title">Installation d'un système Linux</span>
-              <span class="tp-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="tp-content">
-              <p><strong>Objectif</strong></p>
-              <p>Présenter la découverte d'un système Linux et, si cela a été réalisé, son installation dans une machine virtuelle.</p>
-              <p><strong>Notions à présenter</strong></p>
-              <ul>
-                <li>Environnement de virtualisation</li>
-                <li>Étapes d'installation du système</li>
-                <li>Premières commandes et navigation dans le terminal</li>
-              </ul>
-              <p><strong>Outils utilisés :</strong> à renseigner.</p>
-              <p><strong>Étapes réalisées :</strong> à compléter avec ton travail réel.</p>
-              <p><strong>Bilan personnel :</strong> indiquer les notions maîtrisées et les points à approfondir.</p>
-              <span class="tp-status">Fiche modèle à compléter</span>
+            <aside class="hero-card">
+                <div class="card-topline">
+                    <span>MON PARCOURS</span>
+                    <span class="card-index">01 / 06</span>
+                </div>
+
+                <div class="hero-monogram">HT<span>.</span></div>
+
+                <div class="hero-card-info">
+                    <p class="card-label">FORMATION ACTUELLE</p>
+                    <h2>BTS SIO</h2>
+                    <p>Option SISR</p>
+
+                    <div class="card-separator"></div>
+
+                    <p class="card-label">ORIENTATION</p>
+                    <p class="orientation">Systèmes · Réseaux · Sécurité</p>
+                </div>
+
+                <div class="card-decoration">
+                    INFRASTRUCTURE INFORMATIQUE
+                </div>
+            </aside>
+
+        </div>
+
+        <div class="container hero-footer">
+            <span>ÉTUDIANT EN PREMIÈRE ANNÉE</span>
+            <a href="#decouverte">Découvrir le portfolio ↓</a>
+        </div>
+    </section>
+
+    <section class="section" id="decouverte">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="eyebrow">EXPLORER MON PORTFOLIO</p>
+                <h2>Un aperçu de mon <span>univers.</span></h2>
+                <p class="section-intro">
+                    Retrouvez les différentes rubriques de mon parcours
+                    et de ma formation en BTS SIO option SISR.
+                </p>
             </div>
-          </details>
 
-          <details class="content-card tp-card">
-            <summary>
-              <span class="tp-number">TP 03</span>
-              <span class="tp-title">Diagnostic réseau</span>
-              <span class="tp-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="tp-content">
-              <p><strong>Objectif</strong></p>
-              <p>Décrire une situation de diagnostic réseau et la démarche suivie pour identifier l'origine d'un dysfonctionnement.</p>
-              <p><strong>Notions à présenter</strong></p>
-              <ul>
-                <li>Vérification de la configuration IP</li>
-                <li>Tests de connectivité</li>
-                <li>Analyse des résultats obtenus</li>
-              </ul>
-              <p><strong>Outils utilisés :</strong> à renseigner.</p>
-              <p><strong>Étapes réalisées :</strong> à compléter avec les commandes et vérifications réellement utilisées.</p>
-              <p><strong>Bilan personnel :</strong> expliquer le résultat et ce que tu as appris.</p>
-              <span class="tp-status">Fiche modèle à compléter</span>
+            <div class="home-grid">
+
+                <a href="parcours.html" class="content-card home-card home-card-large">
+                    <span class="home-card-number">01</span>
+                    <span class="home-card-icon">↗</span>
+                    <p class="card-label">FORMATION ET EXPÉRIENCE</p>
+                    <h3>Mon parcours</h3>
+                    <p>
+                        Découvrez mes formations, mon parcours scolaire
+                        et mes certifications complémentaires.
+                    </p>
+                    <span class="home-card-link">Explorer le parcours →</span>
+                </a>
+
+                <a href="competences.html" class="content-card home-card">
+                    <span class="home-card-number">02</span>
+                    <span class="home-card-icon">↗</span>
+                    <p class="card-label">APPRENTISSAGE</p>
+                    <h3>Mes compétences</h3>
+                    <p>
+                        Les connaissances, les pratiques et les qualités
+                        que je développe.
+                    </p>
+                    <span class="home-card-link">Voir les compétences →</span>
+                </a>
+
+                <a href="travaux.html" class="content-card home-card">
+                    <span class="home-card-number">03</span>
+                    <span class="home-card-icon">↗</span>
+                    <p class="card-label">MISE EN PRATIQUE</p>
+                    <h3>Travaux pratiques</h3>
+                    <p>
+                        Les TP réalisés ou à documenter pendant ma formation.
+                    </p>
+                    <span class="home-card-link">Voir les travaux →</span>
+                </a>
+
+                <a href="objectifs.html" class="content-card home-card">
+                    <span class="home-card-number">04</span>
+                    <span class="home-card-icon">↗</span>
+                    <p class="card-label">PERSPECTIVES</p>
+                    <h3>Mes objectifs</h3>
+                    <p>
+                        Les étapes que je souhaite franchir pour construire
+                        mon projet professionnel.
+                    </p>
+                    <span class="home-card-link">Découvrir mes objectifs →</span>
+                </a>
+
+                <a href="contact.html" class="content-card home-card home-card-contact">
+                    <span class="home-card-number">05</span>
+                    <span class="home-card-icon">↗</span>
+                    <p class="card-label">PRENDRE CONTACT</p>
+                    <h3>Échangeons ensemble.</h3>
+                    <p>
+                        Une question sur mon parcours ou mon portfolio ?
+                        Retrouvez mes coordonnées.
+                    </p>
+                    <span class="home-card-link">Me contacter →</span>
+                </a>
+
             </div>
-          </details>
         </div>
-
-        <div class="project-guidance">
-          <span class="guidance-icon">+</span>
-          <div>
-            <h3>Documenter chaque TP</h3>
-            <p>
-              Pour enrichir une fiche, ajoute une capture d'écran pertinente,
-              les consignes, les étapes réalisées et un court bilan personnel.
-              Pense à masquer les mots de passe et données confidentielles.
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section class="section section-soft" id="parcours">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">04 — PARCOURS SCOLAIRE</p>
-          <h2>Mon parcours <span>scolaire.</span></h2>
-          <p class="section-intro">
-            Les formations et qualifications qui jalonnent mon parcours.
-          </p>
-        </div>
+</main>
 
-        <div class="formation-grid">
-          <article class="content-card formation-card">
-            <p class="card-label">FORMATION ACTUELLE</p>
-            <h3>BTS Services Informatiques aux Organisations</h3>
-            <p class="formation-option">Option SISR</p>
-            <p>Notre-Dame de la Paix — Ploemeur</p>
-            <p>
-              Formation orientée vers les solutions d'infrastructure,
-              les systèmes, les réseaux et leur sécurisation.
-            </p>
-          </article>
-
-          <article class="content-card formation-card">
-            <p class="card-label">FORMATION PRÉCÉDENTE</p>
-            <h3>Baccalauréat professionnel Métiers de la Sécurité</h3>
-            <p>Saint-Joseph La Salle — Lorient</p>
-            <p>
-              Formation autour de la prévention, de la sécurité,
-              de la gestion des situations et du travail en équipe.
-            </p>
-          </article>
-        </div>
-
-        <div class="certifications-block">
-          <div class="section-heading compact-heading">
-            <p class="eyebrow">QUALIFICATIONS</p>
-            <h3>Mes certifications et formations complémentaires</h3>
-          </div>
-
-          
-<div class="certification-list">
-
-  <article class="certification-card">
-    <span class="certification-acronym">SST</span>
-    <div>
-      <h4>Sauveteur Secouriste du Travail</h4>
-    </div>
-  </article>
-
-  <article class="certification-card">
-    <span class="certification-acronym">SSIAP 1</span>
-    <div>
-      <h4>Service de Sécurité Incendie et d'Assistance à Personnes — Niveau 1</h4>
-    </div>
-  </article>
-
-  <article class="certification-card">
-    <span class="certification-acronym">PSE1</span>
-    <div>
-      <h4>Premiers Secours en Équipe de niveau 1</h4>
-    </div>
-  </article>
-
-  <article class="certification-card">
-    <span class="certification-acronym">PSE2</span>
-    <div>
-      <h4>Premiers Secours en Équipe de niveau 2</h4>
-    </div>
-  </article>
-
-  <article class="certification-card">
-    <span class="certification-acronym">SUAP</span>
-    <div>
-      <h4>Secours d'Urgence Aux Personnes</h4>
-    </div>
-  </article>
-
-</div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="objectifs">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">05 — PERSPECTIVES</p>
-          <h2>Mes objectifs <span>professionnels.</span></h2>
-          <p class="section-intro">
-            Les étapes que je souhaite franchir pour construire mon projet dans l'informatique.
-          </p>
-        </div>
-
-        <div class="objectifs-grid">
-          <article class="content-card objectif-card">
-            <span class="objectif-number">01</span>
-            <p class="card-label">À COURT TERME</p>
-            <h3>Réussir ma formation</h3>
-            <p>Valider mon BTS SIO option SISR, consolider mes connaissances et progresser grâce aux travaux pratiques.</p>
-          </article>
-          <article class="content-card objectif-card">
-            <span class="objectif-number">02</span>
-            <p class="card-label">À MOYEN TERME</p>
-            <h3>Développer mon expérience</h3>
-            <p>Approfondir mes compétences en systèmes, réseaux et maintenance, notamment à travers des expériences professionnelles.</p>
-          </article>
-          <article class="content-card objectif-card">
-            <span class="objectif-number">03</span>
-            <p class="card-label">À LONG TERME</p>
-            <h3>Construire mon projet</h3>
-            <p>Évoluer vers un métier lié à l'administration des systèmes et réseaux, ou vers une spécialisation qui correspondra à mes expériences.</p>
-          </article>
-        </div>
-        <p class="disclaimer">
-          Ces objectifs constituent une orientation de travail et pourront évoluer au fil de la formation et des expériences.
-        </p>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="container">
-        <div class="contact-panel">
-          <div>
-            <p class="eyebrow">06 — CONTACT</p>
-            <h2>Échangeons <span>ensemble.</span></h2>
-            <p>
-              Pour toute question concernant mon parcours ou mon portfolio,
-              vous pouvez me contacter par e-mail.
-            </p>
-          </div>
-
-          <a class="button button-primary" href="mailto:trehorelhippolyte.pro@gmail.com">
-            Me contacter <span>↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
+<footer class="footer">
     <div class="container footer-content">
-      <a href="#accueil" class="logo">HT<span>.</span></a>
-      <p>Portfolio personnel — BTS SIO SISR</p>
+        <a href="index.html" class="logo">HT<span>.</span></a>
+        <p>Portfolio personnel — BTS SIO SISR</p>
     </div>
-  </footer>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
