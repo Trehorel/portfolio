@@ -2,111 +2,94 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Objectifs professionnels d'Hippolyte Tréhorel, étudiant en BTS SIO SISR.">
-    <title>Mes objectifs — Hippolyte Tréhorel</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Objectifs et projet professionnel d'Hippolyte Tréhorel.">
+  <title>Mes objectifs | Hippolyte Tréhorel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+<div class="app-layout">
+  <aside class="sidebar">
+    <a href="index.html" class="brand">
+      <span class="brand-logo">H.</span>
+      <span><span class="brand-name">Hippolyte Tréhorel</span><span class="brand-subtitle">Portfolio informatique</span></span>
+    </a>
+    <p class="nav-caption">Espace personnel</p>
+    <nav class="sidebar-nav">
+      <a href="index.html"><span class="nav-icon">⌂</span>Accueil</a>
+      <a href="parcours.html"><span class="nav-icon">▤</span>Mon parcours</a>
+      <a href="competences.html"><span class="nav-icon">▦</span>Compétences</a>
+      <a href="travaux.html"><span class="nav-icon">▣</span>Travaux pratiques</a>
+      <a href="objectifs.html"><span class="nav-icon">◎</span>Objectifs</a>
+      <a href="contact.html"><span class="nav-icon">✉</span>Contact</a>
+    </nav>
+    <div class="sidebar-bottom">Portfolio étudiant<br>BTS SIO — Option SISR</div>
+  </aside>
 
-<header class="header">
-    <div class="container nav-container">
-        <a href="index.html" class="logo">HT<span>.</span></a>
-        <nav class="navigation" aria-label="Navigation principale">
-            <a href="index.html">Accueil</a>
-            <a href="parcours.html">Parcours</a>
-            <a href="competences.html">Compétences</a>
-            <a href="travaux.html">Travaux pratiques</a>
-            <a href="objectifs.html" class="active">Objectifs</a>
-            <a href="contact.html" class="nav-cta">Contact ↗</a>
-        </nav>
-    </div>
-</header>
+  <main class="main-content">
+    <header class="topbar">
+      <button class="mobile-menu-button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <div class="breadcrumb">Portfolio / <strong>Objectifs</strong></div>
+      <div class="topbar-right"><span class="status-pill">Projet professionnel</span></div>
+    </header>
 
-<main>
-
-    <section class="page-banner">
-        <div class="container">
-            <p class="eyebrow">04 — PERSPECTIVES</p>
-            <h1>Mes objectifs <span>professionnels.</span></h1>
-            <p>
-                Les étapes que je souhaite franchir pour construire
-                mon projet dans le domaine de l'informatique.
-            </p>
-        </div>
+    <section class="page-heading reveal">
+      <div class="page-eyebrow">Perspectives</div>
+      <h1>Mes objectifs</h1>
+      <p>Les étapes que je souhaite développer dans mon parcours de formation et mon avenir professionnel.</p>
     </section>
 
-    <section class="section section-soft">
-        <div class="container">
+    <section class="content-section reveal">
+      <div class="section-title"><h2>Mon évolution</h2></div>
 
-            <div class="section-heading">
-                <p class="eyebrow">MON PROJET</p>
-                <h2>Construire mon <span>avenir.</span></h2>
-                <p class="section-intro">
-                    Mon parcours en BTS SIO SISR représente une étape
-                    importante dans mon orientation vers les systèmes et réseaux.
-                </p>
-            </div>
+      <div class="card-grid">
+        <article class="content-card">
+          <div class="objective-number">01</div>
+          <span class="objective-period">Court terme</span>
+          <h3>Réussir ma formation</h3>
+          <p>Développer mes connaissances en réseaux, systèmes et administration informatique, et progresser dans les matières professionnelles du BTS SIO.</p>
+        </article>
 
-            <div class="objectifs-grid">
+        <article class="content-card">
+          <div class="objective-number">02</div>
+          <span class="objective-period">Moyen terme</span>
+          <h3>Approfondir mes compétences</h3>
+          <p>Renforcer ma pratique technique à travers des projets, des travaux pratiques et des expériences en environnement informatique.</p>
+        </article>
 
-                <article class="content-card objectif-card">
-                    <span class="objectif-number">01</span>
-                    <p class="card-label">À COURT TERME</p>
-                    <h3>Réussir ma formation</h3>
-                    <p>
-                        Valider mon BTS SIO option SISR, consolider mes connaissances
-                        et progresser grâce aux travaux pratiques.
-                    </p>
-                </article>
+        <article class="content-card">
+          <div class="objective-number">03</div>
+          <span class="objective-period">Long terme</span>
+          <h3>Construire mon projet professionnel</h3>
+          <p>Définir la suite de mon parcours et m'orienter vers un métier en lien avec les systèmes, les réseaux ou l'administration des infrastructures.</p>
+        </article>
 
-                <article class="content-card objectif-card">
-                    <span class="objectif-number">02</span>
-                    <p class="card-label">À MOYEN TERME</p>
-                    <h3>Développer mon expérience</h3>
-                    <p>
-                        Approfondir mes compétences en systèmes, réseaux et maintenance,
-                        notamment à travers des expériences professionnelles.
-                    </p>
-                </article>
-
-                <article class="content-card objectif-card">
-                    <span class="objectif-number">03</span>
-                    <p class="card-label">À LONG TERME</p>
-                    <h3>Construire mon projet</h3>
-                    <p>
-                        Évoluer vers un métier lié à l'administration des systèmes
-                        et réseaux, ou vers une spécialisation qui correspondra
-                        à mes expériences.
-                    </p>
-                </article>
-
-            </div>
-
-            <p class="disclaimer">
-                Ces objectifs constituent une orientation de travail et pourront
-                évoluer au fil de la formation et des expériences.
-            </p>
-
-            <div class="page-navigation">
-                <a href="travaux.html" class="button button-secondary">← Travaux pratiques</a>
-                <a href="contact.html" class="button button-primary">Me contacter →</a>
-            </div>
-
-        </div>
+        <article class="content-card">
+          <div class="objective-number">04</div>
+          <span class="objective-period">Progression continue</span>
+          <h3>Continuer à apprendre</h3>
+          <p>Rester curieux, suivre les évolutions technologiques et développer régulièrement de nouvelles compétences.</p>
+        </article>
+      </div>
     </section>
 
-</main>
+    <section class="content-section reveal">
+      <div class="content-card">
+        <div class="card-icon">◎</div>
+        <h3>Mon projet personnel et professionnel</h3>
+        <p>
+          Mon objectif est de construire progressivement un parcours professionnel
+          dans le domaine informatique, en développant des compétences solides
+          en systèmes et réseaux. Je souhaite continuer à apprendre, mettre en
+          pratique mes connaissances et préciser mon orientation au fil de ma formation.
+        </p>
+      </div>
+    </section>
 
-<footer class="footer">
-    <div class="container footer-content">
-        <a href="index.html" class="logo">HT<span>.</span></a>
-        <p>Portfolio personnel — BTS SIO SISR</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
+    <footer class="footer">© <span class="current-year"></span> Hippolyte Tréhorel — Portfolio BTS SIO SISR</footer>
+  </main>
+</div>
 </body>
 </html>
