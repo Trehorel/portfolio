@@ -2,185 +2,126 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio d'Hippolyte Tréhorel, étudiant en BTS SIO SISR.">
-    <meta name="theme-color" content="#151713">
-    <title>Accueil — Hippolyte Tréhorel</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio d'Hippolyte Tréhorel, étudiant en BTS SIO option SISR.">
+  <title>Accueil | Hippolyte Tréhorel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+<div class="app-layout">
 
-<header class="header">
-    <div class="container nav-container">
-        <a href="index.html" class="logo">HT<span>.</span></a>
+  <aside class="sidebar">
+    <a href="index.html" class="brand">
+      <span class="brand-logo">H.</span>
+      <span>
+        <span class="brand-name">Hippolyte Tréhorel</span>
+        <span class="brand-subtitle">Portfolio informatique</span>
+      </span>
+    </a>
 
-        <nav class="navigation" aria-label="Navigation principale">
-            <a href="index.html" class="active">Accueil</a>
-            <a href="parcours.html">Parcours</a>
-            <a href="competences.html">Compétences</a>
-            <a href="travaux.html">Travaux pratiques</a>
-            <a href="objectifs.html">Objectifs</a>
-            <a href="contact.html" class="nav-cta">Contact ↗</a>
-        </nav>
+    <p class="nav-caption">Espace personnel</p>
+    <nav class="sidebar-nav">
+      <a href="index.html"><span class="nav-icon">⌂</span>Accueil</a>
+      <a href="parcours.html"><span class="nav-icon">▤</span>Mon parcours</a>
+      <a href="competences.html"><span class="nav-icon">▦</span>Compétences</a>
+      <a href="travaux.html"><span class="nav-icon">▣</span>Travaux pratiques</a>
+      <a href="objectifs.html"><span class="nav-icon">◎</span>Objectifs</a>
+      <a href="contact.html"><span class="nav-icon">✉</span>Contact</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      Portfolio étudiant<br>
+      BTS SIO — Option SISR
     </div>
-</header>
+  </aside>
 
-<main>
+  <main class="main-content">
+    <header class="topbar">
+      <button class="mobile-menu-button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <div class="breadcrumb">Portfolio / <strong>Accueil</strong></div>
+      <div class="topbar-right">
+        <span class="status-pill"><span class="status-dot"></span>Étudiant en formation</span>
+      </div>
+    </header>
 
-    <section class="hero" id="accueil">
-        <div class="container hero-layout">
-
-            <div class="hero-content">
-                <p class="eyebrow">
-                    <span class="status-dot"></span>
-                    PORTFOLIO PERSONNEL · BTS SIO SISR
-                </p>
-
-                <h1>Hippolyte<br><span>Tréhorel.</span></h1>
-
-                <p class="hero-role">
-                    Étudiant en informatique,<br>
-                    spécialisé dans les systèmes et réseaux.
-                </p>
-
-                <p class="hero-description">
-                    Je construis progressivement mes compétences en informatique,
-                    en administration réseau et en sécurité des systèmes.
-                    Découvrez mon parcours, mes apprentissages et mes objectifs.
-                </p>
-
-                <div class="hero-actions">
-                    <a href="parcours.html" class="button button-primary">
-                        Découvrir mon parcours <span>↗</span>
-                    </a>
-
-                    <a href="contact.html" class="button button-secondary">
-                        Me contacter <span>↗</span>
-                    </a>
-                </div>
-            </div>
-
-            <aside class="hero-card">
-                <div class="card-topline">
-                    <span>MON PARCOURS</span>
-                    <span class="card-index">01 / 06</span>
-                </div>
-
-                <div class="hero-monogram">HT<span>.</span></div>
-
-                <div class="hero-card-info">
-                    <p class="card-label">FORMATION ACTUELLE</p>
-                    <h2>BTS SIO</h2>
-                    <p>Option SISR</p>
-
-                    <div class="card-separator"></div>
-
-                    <p class="card-label">ORIENTATION</p>
-                    <p class="orientation">Systèmes · Réseaux · Sécurité</p>
-                </div>
-
-                <div class="card-decoration">
-                    INFRASTRUCTURE INFORMATIQUE
-                </div>
-            </aside>
-
+    <section class="welcome-card reveal">
+      <div class="welcome-content">
+        <span class="welcome-label">Bienvenue sur mon portfolio</span>
+        <h2>Hippolyte Tréhorel</h2>
+        <p>
+          Étudiant en BTS Services Informatiques aux Organisations,
+          option Solutions d'Infrastructure, Systèmes et Réseaux (SISR).
+          Découvrez mon parcours, mes compétences et mes travaux.
+        </p>
+        <div class="welcome-actions">
+          <a href="parcours.html" class="btn btn-primary">Découvrir mon parcours →</a>
+          <a href="contact.html" class="btn btn-light">Me contacter</a>
         </div>
-
-        <div class="container hero-footer">
-            <span>ÉTUDIANT EN PREMIÈRE ANNÉE</span>
-            <a href="#decouverte">Découvrir le portfolio ↓</a>
-        </div>
+      </div>
+      <div class="welcome-visual">H.</div>
     </section>
 
-    <section class="section" id="decouverte">
-        <div class="container">
-
-            <div class="section-heading">
-                <p class="eyebrow">EXPLORER MON PORTFOLIO</p>
-                <h2>Un aperçu de mon <span>univers.</span></h2>
-                <p class="section-intro">
-                    Retrouvez les différentes rubriques de mon parcours
-                    et de ma formation en BTS SIO option SISR.
-                </p>
-            </div>
-
-            <div class="home-grid">
-
-                <a href="parcours.html" class="content-card home-card home-card-large">
-                    <span class="home-card-number">01</span>
-                    <span class="home-card-icon">↗</span>
-                    <p class="card-label">FORMATION ET EXPÉRIENCE</p>
-                    <h3>Mon parcours</h3>
-                    <p>
-                        Découvrez mes formations, mon parcours scolaire
-                        et mes certifications complémentaires.
-                    </p>
-                    <span class="home-card-link">Explorer le parcours →</span>
-                </a>
-
-                <a href="competences.html" class="content-card home-card">
-                    <span class="home-card-number">02</span>
-                    <span class="home-card-icon">↗</span>
-                    <p class="card-label">APPRENTISSAGE</p>
-                    <h3>Mes compétences</h3>
-                    <p>
-                        Les connaissances, les pratiques et les qualités
-                        que je développe.
-                    </p>
-                    <span class="home-card-link">Voir les compétences →</span>
-                </a>
-
-                <a href="travaux.html" class="content-card home-card">
-                    <span class="home-card-number">03</span>
-                    <span class="home-card-icon">↗</span>
-                    <p class="card-label">MISE EN PRATIQUE</p>
-                    <h3>Travaux pratiques</h3>
-                    <p>
-                        Les TP réalisés ou à documenter pendant ma formation.
-                    </p>
-                    <span class="home-card-link">Voir les travaux →</span>
-                </a>
-
-                <a href="objectifs.html" class="content-card home-card">
-                    <span class="home-card-number">04</span>
-                    <span class="home-card-icon">↗</span>
-                    <p class="card-label">PERSPECTIVES</p>
-                    <h3>Mes objectifs</h3>
-                    <p>
-                        Les étapes que je souhaite franchir pour construire
-                        mon projet professionnel.
-                    </p>
-                    <span class="home-card-link">Découvrir mes objectifs →</span>
-                </a>
-
-                <a href="contact.html" class="content-card home-card home-card-contact">
-                    <span class="home-card-number">05</span>
-                    <span class="home-card-icon">↗</span>
-                    <p class="card-label">PRENDRE CONTACT</p>
-                    <h3>Échangeons ensemble.</h3>
-                    <p>
-                        Une question sur mon parcours ou mon portfolio ?
-                        Retrouvez mes coordonnées.
-                    </p>
-                    <span class="home-card-link">Me contacter →</span>
-                </a>
-
-            </div>
-        </div>
+    <section class="stats-grid reveal">
+      <article class="stat-card">
+        <div class="stat-top"><span class="stat-icon">▤</span></div>
+        <h3>BTS SIO</h3>
+        <p>Option SISR — en cours</p>
+      </article>
+      <article class="stat-card">
+        <div class="stat-top"><span class="stat-icon">⌘</span></div>
+        <h3>Informatique</h3>
+        <p>Réseaux, systèmes et infrastructures</p>
+      </article>
+      <article class="stat-card">
+        <div class="stat-top"><span class="stat-icon">✓</span></div>
+        <h3>Certifications</h3>
+        <p>Qualifications et formations complémentaires</p>
+      </article>
     </section>
 
-</main>
+    <section class="content-section reveal">
+      <div class="section-title">
+        <h2>Explorer mon portfolio</h2>
+        <span>Les différentes rubriques</span>
+      </div>
 
-<footer class="footer">
-    <div class="container footer-content">
-        <a href="index.html" class="logo">HT<span>.</span></a>
-        <p>Portfolio personnel — BTS SIO SISR</p>
-    </div>
-</footer>
+      <div class="card-grid">
+        <article class="content-card">
+          <div class="card-icon">▤</div>
+          <h3>Mon parcours</h3>
+          <p>Retrouvez mes formations et mes certifications.</p>
+          <a href="parcours.html" class="card-link">Consulter le parcours →</a>
+        </article>
 
-<script src="script.js"></script>
+        <article class="content-card">
+          <div class="card-icon">▦</div>
+          <h3>Mes compétences</h3>
+          <p>Découvrez mes connaissances et aptitudes professionnelles.</p>
+          <a href="competences.html" class="card-link">Voir les compétences →</a>
+        </article>
 
+        <article class="content-card">
+          <div class="card-icon">▣</div>
+          <h3>Travaux pratiques</h3>
+          <p>Consultez les fiches de travaux pratiques et réalisations.</p>
+          <a href="travaux.html" class="card-link">Voir les travaux →</a>
+        </article>
+
+        <article class="content-card">
+          <div class="card-icon">◎</div>
+          <h3>Mes objectifs</h3>
+          <p>Découvrez mes perspectives et mon projet professionnel.</p>
+          <a href="objectifs.html" class="card-link">Découvrir mes objectifs →</a>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <span class="current-year"></span> Hippolyte Tréhorel — Portfolio BTS SIO SISR
+    </footer>
+  </main>
+</div>
 </body>
 </html>
