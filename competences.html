@@ -4,119 +4,423 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compétences d'Hippolyte Trehorel en BTS SIO SISR.">
+  <meta name="description" content="Compétences d'Hippolyte Trehorel en BTS SIO SISR et Bac pro Métiers de la Sécurité.">
   <title>Compétences | Hippolyte Trehorel</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
 <div class="app-layout">
+
+  <!-- MENU LATERAL -->
   <aside class="sidebar">
+
     <a href="index.html" class="brand">
       <span class="brand-logo">H.</span>
-      <span><span class="brand-name">Hippolyte Trehorel</span><span class="brand-subtitle">Portfolio informatique</span></span>
+      <span>
+        <span class="brand-name">Hippolyte Trehorel</span>
+        <span class="brand-subtitle">Portfolio informatique</span>
+      </span>
     </a>
+
     <p class="nav-caption">Espace personnel</p>
+
     <nav class="sidebar-nav">
       <a href="index.html"><span class="nav-icon">⌂</span>Accueil</a>
       <a href="parcours.html"><span class="nav-icon">▤</span>Mon parcours</a>
-      <a href="competences.html"><span class="nav-icon">▦</span>Compétences</a>
+      <a href="competences.html" class="active"><span class="nav-icon">▦</span>Compétences</a>
       <a href="travaux.html"><span class="nav-icon">▣</span>Travaux pratiques</a>
       <a href="objectifs.html"><span class="nav-icon">◎</span>Objectifs</a>
       <a href="contact.html"><span class="nav-icon">✉</span>Contact</a>
     </nav>
-    <div class="sidebar-bottom">Portfolio étudiant<br>BTS SIO — Option SISR</div>
+
+    <div class="sidebar-bottom">
+      Portfolio étudiant<br>
+      BTS SIO — Option SISR
+    </div>
+
   </aside>
 
+  <!-- CONTENU PRINCIPAL -->
   <main class="main-content">
+
     <header class="topbar">
       <button class="mobile-menu-button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
       <div class="breadcrumb">Portfolio / <strong>Compétences</strong></div>
-      <div class="topbar-right"><span class="status-pill">Savoirs et aptitudes</span></div>
+      <div class="topbar-right">
+        <span class="status-pill">Savoirs et aptitudes</span>
+      </div>
     </header>
 
+    <!-- PRESENTATION -->
     <section class="page-heading reveal">
-      <div class="page-eyebrow">Savoir-faire</div>
+      <div class="page-eyebrow">Mon profil professionnel</div>
       <h1>Mes compétences</h1>
-      <p>Les connaissances, les compétences pratiques et les qualités que je développe au cours de ma formation.</p>
+      <p>
+        Découvrez les connaissances, les compétences pratiques et
+        les qualités développées au cours de mon parcours scolaire,
+        de mon Bac professionnel à mon BTS SIO SISR.
+      </p>
     </section>
 
     <section class="content-section reveal">
+
+      <!-- ONGLETS -->
       <div class="tabs" role="tablist" aria-label="Catégories de compétences">
-        <button class="tab-button active" id="tab-savoirs" type="button" role="tab" aria-selected="true" aria-controls="panel-savoirs" data-target="panel-savoirs">Savoirs</button>
-        <button class="tab-button" id="tab-savoir-faire" type="button" role="tab" aria-selected="false" aria-controls="panel-savoir-faire" data-target="panel-savoir-faire">Savoir-faire</button>
-        <button class="tab-button" id="tab-savoir-etre" type="button" role="tab" aria-selected="false" aria-controls="panel-savoir-etre" data-target="panel-savoir-etre">Savoir-être</button>
+
+        <button class="tab-button active"
+          id="tab-savoirs"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-savoirs"
+          data-target="panel-savoirs">
+          Savoirs
+        </button>
+
+        <button class="tab-button"
+          id="tab-savoir-faire"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-savoir-faire"
+          data-target="panel-savoir-faire">
+          Savoir-faire
+        </button>
+
+        <button class="tab-button"
+          id="tab-securite"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-securite"
+          data-target="panel-securite">
+          Métiers de la sécurité
+        </button>
+
+        <button class="tab-button"
+          id="tab-savoir-etre"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-savoir-etre"
+          data-target="panel-savoir-etre">
+          Savoir-être
+        </button>
+
       </div>
 
-      <section class="tab-panel" id="panel-savoirs" role="tabpanel" aria-labelledby="tab-savoirs">
-        <div class="section-title"><h2>Connaissances théoriques</h2></div>
+      <!-- ONGLET 1 : SAVOIRS -->
+      <section class="tab-panel"
+        id="panel-savoirs"
+        role="tabpanel"
+        aria-labelledby="tab-savoirs">
+
+        <div class="section-title">
+          <h2>Connaissances théoriques</h2>
+        </div>
+
         <div class="skill-list">
+
           <article class="skill-item">
             <span class="skill-check">01</span>
-            <div><strong>Adressage IP</strong><p>Notions d'adresses IPv4, de masques de sous-réseau et de calcul d'adresses réseau.</p></div>
+            <div>
+              <strong>Adressage IP</strong>
+              <p>
+                Notions d'adresses IPv4, de masques de sous-réseau
+                et de calcul d'adresses réseau.
+              </p>
+            </div>
           </article>
+
           <article class="skill-item">
             <span class="skill-check">02</span>
-            <div><strong>Réseaux informatiques</strong><p>Notions de communication réseau, de DNS, de passerelle et de routage.</p></div>
+            <div>
+              <strong>Réseaux informatiques</strong>
+              <p>
+                Notions de communication réseau, de DNS,
+                de passerelle et de routage.
+              </p>
+            </div>
           </article>
+
           <article class="skill-item">
             <span class="skill-check">03</span>
-            <div><strong>Systèmes informatiques</strong><p>Notions relatives aux systèmes d'exploitation et à leur environnement.</p></div>
+            <div>
+              <strong>Systèmes informatiques</strong>
+              <p>
+                Notions relatives aux systèmes d'exploitation
+                et à leur environnement.
+              </p>
+            </div>
           </article>
+
           <article class="skill-item">
             <span class="skill-check">04</span>
-            <div><strong>Sécurité des systèmes d'information</strong><p>Notions de protection des données, de disponibilité et de sécurité informatique.</p></div>
+            <div>
+              <strong>Sécurité des systèmes d'information</strong>
+              <p>
+                Notions de protection des données, de disponibilité
+                et de sécurité informatique.
+              </p>
+            </div>
           </article>
+
         </div>
       </section>
 
-      <section class="tab-panel" id="panel-savoir-faire" role="tabpanel" aria-labelledby="tab-savoir-faire" hidden>
-        <div class="section-title"><h2>Compétences pratiques</h2></div>
+      <!-- ONGLET 2 : SAVOIR-FAIRE INFORMATIQUE -->
+      <section class="tab-panel"
+        id="panel-savoir-faire"
+        role="tabpanel"
+        aria-labelledby="tab-savoir-faire"
+        hidden>
+
+        <div class="section-title">
+          <h2>Compétences pratiques en informatique</h2>
+        </div>
+
         <div class="skill-list">
+
           <article class="skill-item">
             <span class="skill-check">01</span>
-            <div><strong>Configuration réseau</strong><p>Réaliser des exercices de configuration et de vérification d'adresses IP.</p></div>
+            <div>
+              <strong>Configuration réseau</strong>
+              <p>
+                Réaliser des exercices de configuration
+                et de vérification d'adresses IP.
+              </p>
+            </div>
           </article>
+
           <article class="skill-item">
             <span class="skill-check">02</span>
-            <div><strong>Utilisation du terminal</strong><p>Utiliser des commandes pour consulter et diagnostiquer une configuration réseau.</p></div>
+            <div>
+              <strong>Utilisation du terminal</strong>
+              <p>
+                Utiliser des commandes pour consulter
+                et diagnostiquer une configuration réseau.
+              </p>
+            </div>
           </article>
+
           <article class="skill-item">
             <span class="skill-check">03</span>
-            <div><strong>Environnement virtualisé</strong><p>Découvrir l'utilisation de machines virtuelles dans un environnement de formation.</p></div>
+            <div>
+              <strong>Environnement virtualisé</strong>
+              <p>
+                Découvrir l'utilisation de machines virtuelles
+                dans un environnement de formation.
+              </p>
+            </div>
           </article>
+
         </div>
       </section>
 
-      <section class="tab-panel" id="panel-savoir-etre" role="tabpanel" aria-labelledby="tab-savoir-etre" hidden>
-        <div class="section-title"><h2>Qualités professionnelles</h2></div>
+      <!-- ONGLET 3 : BAC PRO METIERS DE LA SECURITE -->
+      <section class="tab-panel"
+        id="panel-securite"
+        role="tabpanel"
+        aria-labelledby="tab-securite"
+        hidden>
+
+        <div class="section-title">
+          <h2>Compétences professionnelles en sécurité</h2>
+        </div>
+
         <div class="skill-list">
+
           <article class="skill-item">
             <span class="skill-check">01</span>
-            <div><strong>Rigueur</strong><p>Appliquer une méthode de travail organisée et attentive aux détails.</p></div>
+            <div>
+              <strong>Prévention des risques</strong>
+              <p>
+                Identifier les risques et les situations dangereuses
+                afin de contribuer à la prévention des incidents.
+              </p>
+            </div>
           </article>
+
           <article class="skill-item">
             <span class="skill-check">02</span>
-            <div><strong>Esprit d'équipe</strong><p>Échanger et collaborer avec les autres dans le cadre d'un travail collectif.</p></div>
+            <div>
+              <strong>Surveillance et sécurité</strong>
+              <p>
+                Participer à la surveillance des personnes
+                et des biens dans le respect des consignes.
+              </p>
+            </div>
           </article>
+
           <article class="skill-item">
             <span class="skill-check">03</span>
-            <div><strong>Adaptabilité</strong><p>S'adapter à de nouvelles situations et à de nouveaux environnements.</p></div>
+            <div>
+              <strong>Application des procédures</strong>
+              <p>
+                Appliquer des consignes et des protocoles
+                adaptés aux différentes situations.
+              </p>
+            </div>
           </article>
+
           <article class="skill-item">
             <span class="skill-check">04</span>
-            <div><strong>Sens des responsabilités</strong><p>Prendre en compte les consignes et les exigences d'une mission.</p></div>
+            <div>
+              <strong>Secourisme</strong>
+              <p>
+                Connaître les gestes de premiers secours
+                et les conduites à tenir face à une situation d'urgence.
+              </p>
+            </div>
           </article>
+
+          <article class="skill-item">
+            <span class="skill-check">05</span>
+            <div>
+              <strong>Gestion des situations d'urgence</strong>
+              <p>
+                Analyser une situation, donner l'alerte
+                et appliquer les procédures adaptées.
+              </p>
+            </div>
+          </article>
+
+          <article class="skill-item">
+            <span class="skill-check">06</span>
+            <div>
+              <strong>Communication professionnelle</strong>
+              <p>
+                Transmettre des informations utiles
+                et communiquer avec les différents intervenants.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="section-title">
+          <h2>Diplômes et qualifications associés</h2>
+        </div>
+
+        <div class="skill-list">
+
+          <article class="skill-item">
+            <span class="skill-check">SST</span>
+            <div>
+              <strong>Sauveteur Secouriste du Travail</strong>
+              <p>Formation aux premiers secours en milieu professionnel.</p>
+            </div>
+          </article>
+
+          <article class="skill-item">
+            <span class="skill-check">PSE</span>
+            <div>
+              <strong>PSE1 et PSE2</strong>
+              <p>Formations aux premiers secours en équipe.</p>
+            </div>
+          </article>
+
+          <article class="skill-item">
+            <span class="skill-check">SSI</span>
+            <div>
+              <strong>SSIAP 1</strong>
+              <p>Service de sécurité incendie et d'assistance à personnes.</p>
+            </div>
+          </article>
+
+          <article class="skill-item">
+            <span class="skill-check">SUAP</span>
+            <div>
+              <strong>SUAP</strong>
+              <p>Secours d'urgence aux personnes.</p>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- ONGLET 4 : SAVOIR-ETRE -->
+      <section class="tab-panel"
+        id="panel-savoir-etre"
+        role="tabpanel"
+        aria-labelledby="tab-savoir-etre"
+        hidden>
+
+        <div class="section-title">
+          <h2>Qualités professionnelles</h2>
+        </div>
+
+        <div class="skill-list">
+
+          <article class="skill-item">
+            <span class="skill-check">01</span>
+            <div>
+              <strong>Rigueur</strong>
+              <p>
+                Appliquer une méthode de travail organisée
+                et attentive aux détails.
+              </p>
+            </div>
+          </article>
+
+          <article class="skill-item">
+            <span class="skill-check">02</span>
+            <div>
+              <strong>Esprit d'équipe</strong>
+              <p>
+                Échanger et collaborer avec les autres
+                dans le cadre d'un travail collectif.
+              </p>
+            </div>
+          </article>
+
+          <article class="skill-item">
+            <span class="skill-check">03</span>
+            <div>
+              <strong>Adaptabilité</strong>
+              <p>
+                S'adapter à de nouvelles situations
+                et à de nouveaux environnements.
+              </p>
+            </div>
+          </article>
+
+          <article class="skill-item">
+            <span class="skill-check">04</span>
+            <div>
+              <strong>Sens des responsabilités</strong>
+              <p>
+                Prendre en compte les consignes
+                et les exigences d'une mission.
+              </p>
+            </div>
+          </article>
+
         </div>
       </section>
+
     </section>
 
+    <!-- INFORMATION -->
     <div class="info-banner content-section reveal">
       <span class="info-banner-icon">ⓘ</span>
-      <p>Cette page présente des exemples de compétences à adapter à ton niveau réel. Tu peux ajouter des preuves concrètes dans la rubrique Travaux pratiques.</p>
+      <p>
+        Ces compétences ont été développées au cours de mon parcours
+        scolaire et de mes formations. Elles pourront être illustrées
+        par des exemples concrets dans les rubriques Parcours
+        et Travaux pratiques.
+      </p>
     </div>
 
-    <footer class="footer">© <span class="current-year"></span> Hippolyte Trehorel — Portfolio BTS SIO SISR</footer>
+    <!-- PIED DE PAGE -->
+    <footer class="footer">
+      © <span class="current-year"></span>
+      Hippolyte Trehorel — Portfolio BTS SIO SISR
+    </footer>
+
   </main>
 </div>
 </body>
